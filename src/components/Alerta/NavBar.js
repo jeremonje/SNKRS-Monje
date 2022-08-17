@@ -6,11 +6,11 @@ function Alerta(){
         <header>
             <h1>yourStyle</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>Home</li>
+                <li>Products</li>
+                <li>What's New</li>
+                <li>Newsletter</li>
+                <li>Contact</li>
             </ul>
         </header>
     )
