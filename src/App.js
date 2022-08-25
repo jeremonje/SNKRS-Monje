@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
-import { NavBar } from './components/NavBar';
-import ItemListContainer1 from './components/ItemListContainer';
+import { NavBar } from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <NavBar></NavBar>
       </header>
       <main>
-        <ItemListContainer1></ItemListContainer1>
+        <ItemListContainer greeting='OUR MODELS: Nike, Fila, New Balance'></ItemListContainer>
       </main>
     </div>
   );
