@@ -4,9 +4,9 @@ import ItemList from "../ItemList/ItemList";
 
 
 const snkrs = [
-    { id: 1, image: "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc127c292/products/NI_DC4013-001/NI_DC4013-001-1.JPG", title: "Nike Air Max 97"},
-    { id: 2, image: "https://www.dmsports.fr/17120-large_default/baskets-nike-air-max-plus-tn.jpg", title: "Nike Air Max plus"},
-    { id: 3, image: "https://shoesandmorebdn.com/2113-large_default/nike-air-vapormax-flyknit-blancas.jpg", title: "Nike Air Vapormax"},
+    { id: 1, image: "https://o.remove.bg/downloads/22896af5-a313-48b5-b425-b1ecb3bc816a/NI_DC4013-001-1-removebg-preview.png", title: "Nike Air Max 97"},
+    { id: 2, image: "https://o.remove.bg/downloads/803ac241-afa5-4afd-a2f6-07715a75f384/baskets-nike-air-max-plus-tn-removebg-preview.png", title: "Nike Air Max plus"},
+    { id: 3, image: "https://o.remove.bg/downloads/732aac98-8511-4b35-8c66-2bd914834321/nike-air-vapormax-flyknit-849558-100-removebg-preview.png", title: "Nike Air Vapormax"},
 ];
 
 export const ItemListContainer = ({greeting}) => {

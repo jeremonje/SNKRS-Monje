@@ -1,8 +1,8 @@
 //import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -11,10 +11,19 @@ function App() {
         <NavBar></NavBar>
       </header>
       <main>
-        <ItemListContainer greeting='OUR MODELS: Nike, Fila, New Balance'></ItemListContainer>
+
+        
+        <ItemDetailContainer/>
       </main>
+      
     </div>
   );
 }
 
 export default App;
+/*
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+
+<ItemListContainer greeting='OUR MODELS: Nike, Fila, New Balance'></ItemListContainer>
+
+*/
