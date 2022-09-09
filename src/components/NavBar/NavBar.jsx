@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
     return(
-        <>
+        <header>
         <div className="nav">
             
             <Link to={"/"}> 
                 <h1> SNKRS </h1>
-            </Link>
+            </Link> 
             <ul>
                 <li><a href="/">Home</a></li>
                 <Link to={"/category/nike"}><li id="links">Nike</li></Link>
@@ -24,6 +24,6 @@ export const NavBar = () => {
                 
             </ul>
         </div>
-        </>
+        </header>
     )
 }

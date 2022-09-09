@@ -4,11 +4,13 @@
     margin: auto;
     text-align: center;
     font-family: arial;
+    
 }
 
 .price {
     color: grey;
     font-size: 22px;
+    
 }
 img{
     width:100%
