@@ -3,7 +3,7 @@ export const array = [
         id: 1,
         title: "Nike Air Max 97 Se",
         description: "Las Zapatillas Nike Air Max 97 lucen un diseño innovador pero sin perder el estilo que mantiene hace años.",
-        Price: 42.699,
+        Price: 62.699,
         category: "nike",
         pictureUrl: "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc127c292/products/NI_DC4013-001/NI_DC4013-001-1.JPG"
     },

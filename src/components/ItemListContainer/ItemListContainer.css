@@ -1,10 +1,11 @@
-.card {
+.cardd {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
     padding: 35px;
+    
 }
 
 .price {
@@ -13,11 +14,11 @@
     
 }
 img{
-    width:100%
+    width:100%;
     
 }
 
-.card button {
+.cardd button {
     
     border: none;
     outline: 0;
@@ -28,9 +29,10 @@ img{
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    
 }
 
-.card button:hover {
+.cardd button:hover {
     opacity: 0.7;
     
 }

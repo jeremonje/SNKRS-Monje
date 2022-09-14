@@ -17,8 +17,10 @@ export const ItemDetail = ({title, description,Price,pictureUrl}) => {
             <h1>{title}</h1>
             <p className='price'>${Price}</p>
             <p>{description}</p>
-            <ItemCount initial={1} stock={6} on Add={onAdd} />
+            <ItemCount initial={1} stock={6} onAdd={onAdd} />
             
         </div>
     )
 }
+
+export default ItemDetail;
