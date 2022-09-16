@@ -24,7 +24,7 @@ export const ItemDetailContainer = () => {
         <div id='item-detail-container'>
             {
                 loading?
-                    <div>Cargando...</div>
+                    <div class="loader"></div>
                 :
                     <ItemDetail {...product}/>
             }

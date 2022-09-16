@@ -5,8 +5,6 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css"
 
-
-
 export const ItemListContainer = () => {
         const [products, setProducts] = useState([])
         const [loading, setLoading] = useState(true)
@@ -27,7 +25,7 @@ export const ItemListContainer = () => {
         <div id='item-List-container'>
             {
                 loading?
-                    <div>Cargando...</div>
+                    <div class="loader"></div>
                 :
                     <ItemList items={products} />
             }

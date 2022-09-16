@@ -1,6 +1,7 @@
 import React, {  /*useState*/} from 'react'
 import {ItemCount} from "../ItemCount/ItemCount"
 import { useCartContext } from '../../Context/CartContext'
+import { Link } from 'react-router-dom';
 
 export const ItemDetail = ({title, description,Price,pictureUrl}) => {
 
@@ -12,6 +13,7 @@ export const ItemDetail = ({title, description,Price,pictureUrl}) => {
     }
 
     return (
+        <>
         <div className='card'>
             <img src={pictureUrl} alt={title}/>
             <h1>{title}</h1>
@@ -19,7 +21,10 @@ export const ItemDetail = ({title, description,Price,pictureUrl}) => {
             <p>{description}</p>
             <ItemCount initial={1} stock={6} onAdd={onAdd} />
             
+        
         </div>
+        <Link to='/' className='Link'>Volver</Link>
+        </>
     )
 }
 

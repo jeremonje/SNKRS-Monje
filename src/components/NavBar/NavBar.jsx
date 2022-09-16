@@ -12,15 +12,14 @@ export const NavBar = () => {
                 <h1> SNKRS </h1>
             </Link> 
             <ul>
-                <li><a href="/">Home</a></li>
+                {/*<li><a href={"/"}>Home</a></li>*/}
+                <Link to={"/"}><li id="links">Home</li></Link>
                 <Link to={"/category/nike"}><li id="links">Nike</li></Link>
                 <Link to={"/category/adidas"}><li id="links">Adidas</li></Link>
                 <Link to={"/category/fila"}><li id="links">Fila</li></Link>
                 <li><a href="/">Contact</a></li>
                 
-                <li>
-                    <a href="/"><CartWidget /></a>
-                </li>
+                <Link to={"/cart"} id="links"><CartWidget /></Link>
                 
             </ul>
         </div>
