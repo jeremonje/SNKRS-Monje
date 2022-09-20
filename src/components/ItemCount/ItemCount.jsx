@@ -21,8 +21,8 @@ export const ItemCount = ({initial, stock, onAdd}) => {
         <>
             <div className="count">
                 <div>
-                    <img src={"./pexels-nike.webp"}
-                    alt={ 'Nike'}
+                    <img src={"p"}
+                    alt={ ''}
                     className="img"
                 />
                 </div>

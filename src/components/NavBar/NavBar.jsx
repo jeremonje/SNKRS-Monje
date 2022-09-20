@@ -17,8 +17,7 @@ export const NavBar = () => {
                 <Link to={"/category/nike"}><li id="links">Nike</li></Link>
                 <Link to={"/category/adidas"}><li id="links">Adidas</li></Link>
                 <Link to={"/category/fila"}><li id="links">Fila</li></Link>
-                <li><a href="/">Contact</a></li>
-                
+                {/*<Link to={"/contact"}><li id="links">Contact</li></Link>*/}
                 <Link to={"/cart"} id="links"><CartWidget /></Link>
                 
             </ul>

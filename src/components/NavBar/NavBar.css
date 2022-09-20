@@ -6,8 +6,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0062be;
+    
     transition: 0.5s;
+    
     }
 h1{
     display: inline-block;
@@ -26,7 +27,9 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    overflow: hidden;
+    background-color: rgb(17, 16, 16);
+    position: fixed;
 }
 .nav ul{
     position: relative;

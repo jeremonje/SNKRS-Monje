@@ -4,6 +4,9 @@ import { useCartContext } from '../../Context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
 
 const Cart = () => {
+    const redondeo = (totalPrice) => {
+        return Math.round(totalPrice)
+    }
     const { cart, totalPrice } = useCartContext();
     if (cart.length === 0) {
         return (
@@ -20,7 +23,7 @@ const Cart = () => {
                 cart.map(product => <ItemCart key={product.id} product={product} />)
             }
             <p>
-                total: {totalPrice()}
+                total: {redondeo(totalPrice())}
             </p>
         </>
     )

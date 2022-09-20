@@ -3,13 +3,12 @@ import {ItemCount} from "../ItemCount/ItemCount"
 import { useCartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom';
 
-export const ItemDetail = ({title, description,Price,pictureUrl}) => {
+export const ItemDetail = ({title, description,Price,pictureUrl, id, category}) => {
 
     const {addProduct} = useCartContext();
 
     const onAdd = (quantity) => {
-        console.log(`Compraste ${quantity} unidades`);
-        addProduct(onAdd, quantity);
+        addProduct({title, description, Price, pictureUrl, id, category}, quantity);
     }
 
     return (
@@ -23,7 +22,7 @@ export const ItemDetail = ({title, description,Price,pictureUrl}) => {
             
         
         </div>
-        <Link to='/' className='Link'>Volver</Link>
+        <Link to={`/category/${category}`} className='Link'>Volver</Link>
         </>
     )
 }
