@@ -81,7 +81,7 @@ export const array = [
     },
     {
         id: 11,
-        title: "adidas Forum Low.jfif",
+        title: "adidas Forum Low",
         description: "Todo el estilo, diseño, comodidad y amor por lo que nos rodea está en las Zapatillas Forum Low.",
         Price: 40699,
         category: "adidas",

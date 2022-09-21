@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
+import "./Cart.css"
 
 const Cart = () => {
     const redondeo = (totalPrice) => {
@@ -11,8 +12,11 @@ const Cart = () => {
     if (cart.length === 0) {
         return (
             <>
+            <div className='cart'>
                 <p>No hay elementos en el carrito</p>
-                <Link to='/'>Hacer compras</Link>
+                <br></br>
+                <Link to='/' className='link'>Hacer compras</Link>
+            </div>
             </>
         );
     }
