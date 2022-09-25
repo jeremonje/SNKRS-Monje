@@ -10,40 +10,17 @@ import { db } from '../../utils/firebase';
 
 export const ItemListContainer = () => {
         const [products, setProducts] = useState([]);
-        //const {categoryId} = useParams();
-        
-        const [arregloProductos, setArregloProductos] = useState([]);
-
-    useEffect(()=>{
-        const getData = async()=>{
+    
+    useEffect(() => {
+        const getDocumento = async()=>{
             const query = collection(db,"items");
-            const response = getDocs(query);
-            const docs = (await response).docs;
-            //console.log("doc info", docs[0].data())
-            //console.log("doc id", docs[0].id)
-            const data = docs.map(doc=>{return {...doc.data(), id:doc.id} })
-            setArregloProductos(data);
+            getDocs(query)
+                .then( res => setProducts(res.docs.map( product => ({ id: product.id, ...product.data()}))))
         }
-        getData()
+        getDocumento()
+    
     },[])
-
-
-        /*useEffect(() => {
-            const querydb = getFirestore();
-            const queryCollection = collection(querydb, 'items');
-            if (categoryId) {
-                const queryFilter= query(queryCollection, where('category', '==', categoryId))
-                getDocs(queryFilter)
-                    .then(res => setProducts(res.docs.map(product => ({ id: products.id, ...products.product() }))))
-            }else {
-                getDocs(queryCollection)
-                    .then(res => setProducts(res.docs.map(product => ({ id: products.id, ...products.product() }))))
-            }
-        }, [categoryId])*/
-
-
-            
-            
+    
     return (
         <div id='item-List-container'>
             
