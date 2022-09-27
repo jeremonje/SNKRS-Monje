@@ -1,45 +1,35 @@
 import React, { useEffect, useState } from "react";  
-/*import { getArray } from "../helpers/getArray";
-import { array } from "../../data/data";*/
+
 import { ItemDetail } from "./ItemDetail";
-//import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./ItemDetailContainer.css"
-import { /*getFirestore,*/ doc, getDoc } from "firebase/firestore"
+import { doc, getDoc } from "firebase/firestore"
 import { db } from '../../utils/firebase';
 
 
-export const ItemDetailContainer = () => {
-        const [product, setProduct] = useState({});
-        /*const [loading, setLoading] = useState(true)*/
-        //const {itemId} = useParams();
-
-        /*useEffect(()=>{
-            const getDocumento = async()=>{
-                const query = doc(db,"items","0xhI4aO8EPis7yTWbt0z");
-                const response = await getDoc(query);
-                const producto = {
-                    ...response.data(),
-                    id: response.id
-                }
-                console.log("productos", producto)
-                //setArregloProductos(data);
-            }
-            getDocumento()
-        },[])*/
+export const ItemDetailContainer = ()=>{
+    const {itemId} = useParams();
+    const [item, setItem] = useState({});
+    
 
     useEffect(() => {
-        const getDocumento = async()=>{
-                const query = doc(db, 'items', '0xhI4aO8EPis7yTWbt0z');
-                getDoc(query)
-                .then( res => setProduct(res.docs.map(product =>({ id: product.id, ...product.data() }))))
+        const queryRef = doc(db, "items", itemId);
+        getDoc(queryRef).then(response=>{
+            const newDoc = {
+                ...response.data(),
+                id:response.id
             }
-            getDocumento()
-            }, [])
+            console.log(newDoc)
+            setItem(newDoc)
+        }).catch(error=>console.log(error));
+
+        }, [itemId])
             
 
     return (
-        
-        <ItemDetail product={product} />  
+        <div className="item-detail-container">
+            <ItemDetail item={item}/>
+        </div>
     );
 }
 

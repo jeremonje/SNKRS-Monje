@@ -56,3 +56,11 @@ img{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+.item-detail-container{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}

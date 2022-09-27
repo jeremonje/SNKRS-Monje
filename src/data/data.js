@@ -2,7 +2,7 @@ export const array = [
     {
         id: 1,
         title: "Nike Air Max 90 Se",
-        description: "as zapatillas Nike Air MAx 90 Se son una mirada más de cerca hacia los 90. Presenta una mezcla de materiales reciclados junto a tonos brillantes que hacen alusión a la primavera.",
+        description: "Las zapatillas Nike Air MAx 90 Se son una mirada más de cerca hacia los 90. Presenta una mezcla de materiales reciclados junto a tonos brillantes que hacen alusión a la primavera.",
         Price: 62699,
         category: "nike",
         pictureUrl: "/img/Nike Air Max 90 Se.jfif"

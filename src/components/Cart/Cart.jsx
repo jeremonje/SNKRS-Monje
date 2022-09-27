@@ -25,9 +25,6 @@ const Cart = () => {
     }
 
 
-
-
-
     const redondeo = (totalPrice) => {
         return Math.round(totalPrice)
     }
