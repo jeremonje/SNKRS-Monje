@@ -9,11 +9,11 @@ export const Inicio = () => {
 <div className="content">
     <div className="textBox">
         <h2>meet our  <span>SNKRS</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolorem similique atque maxime fugit. Aut commodi expedita libero, id voluptate et voluptates assumenda aperiam reiciendis officiis voluptatem rem fugit quas?</p>
+        <p>we present you the best snkrs</p>
         <Link to={"/productos"}>View All Products</Link>
     </div>
     <div className="imgBox">
-        <img src="https://images.pexels.com/photos/9565800/pexels-photo-9565800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        <img src="https://images.pexels.com/photos/8871469/pexels-photo-8871469.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
     </div>
 </div>
 <ul className="thumb">

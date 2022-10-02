@@ -35,6 +35,8 @@ const CartProvider = ({children}) => {
 
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 
+    const clearProductCartList = (id) => setCart(cart.filter(product => product.id !== id));
+
     const getTotalPrice = ()=>{
         const totalPriceProducts = cart.reduce((acumulador, productoActual)=> acumulador + productoActual.totalPrice,0);
         console.log(totalPriceProducts);
@@ -42,7 +44,7 @@ const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{clearCart, isInCart, removeProduct, addProduct,totalPrice,totalProducts,cart,getTotalPrice }}>
+        <CartContext.Provider value={{clearCart, isInCart, removeProduct, addProduct,totalPrice,totalProducts,cart,getTotalPrice, clearProductCartList }}>
             {children}
         </CartContext.Provider>
     )

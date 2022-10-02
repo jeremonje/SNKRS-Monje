@@ -15,6 +15,7 @@ export const ItemDetail = ({item})=>{
     }
 
     return(
+        <div className='detail'>
         <div className='card'>
             <p style={{width: "100%"}}>{item.category}</p>
             <div className='img-container'>
@@ -32,6 +33,7 @@ export const ItemDetail = ({item})=>{
                     <button>Ir al carrito</button>
                 </Link>
             }<Link to={`/productos/${item.category}`} className='Link'>Volver</Link>
+        </div>
         </div>
     )
 }

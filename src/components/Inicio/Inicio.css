@@ -2,12 +2,13 @@
 section{
     
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
+    
+    height: 885px;
+    padding: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #be6c0097;
+    background: #0062be;
     transition: 0.5s;
 }
 
@@ -21,6 +22,7 @@ section{
 .content .textBox{
     position: relative;
     max-width: 600px;
+    width: 100%;
 }
 .content .textBox h2{
     color: #fff;
@@ -48,14 +50,17 @@ section{
     text-transform: uppercase;
 }
 .content .imgBox{
-    width: 600px;
+    width: 400px;
     display:flex;
     padding-right: 0px;
     margin-top: 0px;
     justify-content: flex-end;
 }
 .content .imgBox img{
-    max-width: 660px;
+    max-width: 400px;
+    
+    overflow: hidden;
+    position: relative;
 }
 .thumb{
     position: absolute;

@@ -37,7 +37,7 @@ import { useParams } from 'react-router-dom';
 import {collection, getDocs} from "firebase/firestore";
 import { db } from '../../utils/firebase';
 import "./ItemListContainer.css"
-import Inicio from '../Inicio/Inicio';
+//import Inicio from '../Inicio/Inicio';
 
 export const ItemListContainer = ()=>{
     const {category} = useParams();
@@ -82,7 +82,7 @@ export const ItemListContainer = ()=>{
     return(
         <div className='item-list-container'>
             
-            <Inicio/>
+            
             {/* <p className="title"> Products</p> */}
             <ItemList items= {productos}/>
         </div>

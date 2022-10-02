@@ -4,6 +4,7 @@
     margin: auto;
     text-align: center;
     font-family: arial;
+    background-color:#ffffff;
     
 }
 
@@ -63,4 +64,9 @@ img{
     align-items: center;
     flex-direction: column;
     padding: 10px;
+    background-color:#0062be;
+}
+.detail{
+    min-height: 92vh;
+    max-width: 92vh;
 }

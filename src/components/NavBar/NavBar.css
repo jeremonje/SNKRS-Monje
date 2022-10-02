@@ -28,7 +28,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background-color: rgb(17, 16, 16);
+    background-color:#0062be;
     position: fixed;
 }
 .nav ul{
