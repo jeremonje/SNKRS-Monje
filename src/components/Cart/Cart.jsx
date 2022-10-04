@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { db } from '../../utils/firebase';
 import { addDoc, collection} from 'firebase/firestore'
 import { Link } from 'react-router-dom';
+//import {formulario} from '../formulario/formulario'
 
 export const Cart = () => {
     const {productCartList, getTotalPrice} = useContext(CartContext);
@@ -25,54 +26,13 @@ export const Cart = () => {
             total: getTotalPrice()
         }
         //crear referencia en la base de datos
-        const queryRef = collection(db, "orders");
+        const queryRef = collection(db,"orders");
         //agregamois el Documento
         addDoc(queryRef, order).then(respuesta=>setIdOrder(respuesta.id))
         console.log(order);
-        
     }
-    //actualizar data de los productos
-    // const updateOrder= ()=>{
-    //     const queryRef = doc(db, "items", "0xhI4aO8EPis7yTWbt0z");
-    //     updateDoc(queryRef, {
-    //         Price:41.999,
-    //         category:"adidas",
-    //         description:"Las zapatillas Adidas Ozweego son perfectas para tus días de running. Su diseño está inspirado en modelos Adidas de los 90's.",
-    //         pictureUrl:"https://firebasestorage.googleapis.com/v0/b/coderhouse-snkrs.appspot.com/o/Adidas%20Ozweego.jpg?alt=media&token=ba1e0f03-92ed-4708-bd93-0a46f7b437a4",
-    //         title:"adidas Ozweego"
-    //     }).then(()=>console.log("producto actualizado"))
-    // }
-/*
-    return(
-        <div>
-            <p>Cart</p>
-            <div>
-                {
-                    productCartList.length>0 ?
-                    <>
-                        {
-                            productCartList.map(item=>(
-                                <ItemCart key={item.id} item={item}/>
-                            ))
-                        }
-                        <hr/>
-                        <button onClick={clearProductCartList}>Vaciar el carrito</button>
-                        <p>Precio total: {getTotalPrice()}</p>
-                        <form onSubmit={sendOrder}>
-                            <input type="text" placeholder='nombre'></input>
-                            <input type="number" placeholder='telefono'></input>
-                            <input type="email" placeholder='email'></input>
-                            <button type='submit'>enviar orden</button>
-                        </form>
-                        <button onClick={updateOrder}>Actualizar</button>
-                    </>
-                    :
-                    <p>No has agregado productos</p>
-                }
-            </div>
-        </div>
-    )
-}*/
+
+    
 
     const redondeo = (totalPrice) => {
         return Math.round(totalPrice)
@@ -112,78 +72,76 @@ export const Cart = () => {
 // export default Cart
 
 return (
-    <div className='cart'>
+        <div className='cart'>
             <div className="row mx-4" id='cartt'>
-        <div className="col">
-        {
-            cart.map(product => <ItemCart key={product.id} product={product} />)
-        }
-        <p>
-        total: {redondeo(totalPrice())}
-        </p>
-        <hr/>
-        Porfavor complete el siguiente formulario para realizar la compra.
-        <hr/>
-        </div>
-        
-        <div className="col d-flex justify-content-end">
-        {/* <!--<button class="btn btn-success">COMPRAR</button>--> */}
-        </div>
+                <div className="col">
+                    {
+                        cart.map(product => <ItemCart key={product.id} product={product} />)
+                    }
+                    <p>
+                    total: {redondeo(totalPrice())}
+                    </p>
+                    
+                </div>
+            </div>
+            <br/>
+            <br/>
+            
+            
+            <div className="contact_form">
+                <p className='p'>Completa este formulario y en breve nos pondremos en contacto contigo</p>
+                <br/>
+        <div className="formulario">      
+            
+
+            <form onSubmit={sendOrder} action="submeter-formulario.php" method="post">       
+
+            
+                <p  className='p'>
+                <label htmlFor="nombre" className="colocar_nombre">Nombre
+                    <span  id='span' className="obligatorio">*</span>
+                </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre"/>
+                </p>
+            
+                <p className='p'>
+                <label htmlFor="email" className="colocar_email">Email
+                    <span id='span' className="obligatorio">*</span>
+                </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email"/>
+                </p>
+            
+                <p className='p'>
+                <label htmlFor="telefone" className="colocar_telefono">Teléfono
+                </label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono"/>
+                </p>    
+            
+                <p className='p'>
+                <label htmlFor="país" className="colocar_país">país
+                </label>
+                    <input type="text" name="introducir_país" id="país" placeholder="Escribe tu país"/>
+                </p>    
+            
+                <p className='p'>
+                <label htmlFor="Provincia" className="colocar_asunto">Provincia
+                    <span id='span' className="obligatorio">*</span>
+                </label>
+                    <input type="text" name="introducir_Provincia" id="Provincia" required="obligatorio" placeholder="Escribe tu Provincia"/>
+                </p>    
+            
+            
+                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+                <p className="aviso">
+                  <span id='span' className="obligatorio"> * </span>los campos son obligatorios.
+                </p>          
+            
+            </form>
+        </div>  
     </div>
-    <br/><br/><br/><br/>
-    <>
-		<form action="" className="formulario" id="formulario" onSubmit={sendOrder}>
 
-			{/* <!-- Grupo: Nombre --> */}
-			<div className="formulario__grupo" id="grupo__nombre">
-				<label htmlFor="nombre" className="formulario__label">Nombre</label>
-				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="nombre" id="nombre" placeholder="John Doe"/>
-					<i className="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p className="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-			</div>
-
-			{/* <!-- Grupo: Correo Electronico --> */}
-			<div className="formulario__grupo" id="grupo__correo">
-				<label htmlFor="correo" className="formulario__label">Correo Electrónico</label>
-				<div className="formulario__grupo-input">
-					<input type="email" className="formulario__input" name="correo" id="correo" placeholder="correo@correo.com"/>
-					<i className="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p className="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-			</div>
-
-			{/* <!-- Grupo: Teléfono --> */}
-			<div className="formulario__grupo" id="grupo__telefono">
-				<label htmlFor="telefono" className="formulario__label">Teléfono</label>
-				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="telefono" id="telefono" placeholder="4491234567"/>
-					<i className="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p className="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
-			</div>
-
-			{/* <!-- Grupo: Terminos y Condiciones --> */}
-			<div className="formulario__grupo" id="grupo__terminos">
-				<label className="formulario__label">
-					<input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos"/>
-					Acepto los Terminos y Condiciones
-				</label>
-			</div>
-
-			<div className="formulario__mensaje" id="formulario__mensaje">
-				<p><i className="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
-
-			<div className="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" className="formulario__btn">Finalizar Pedido</button>
-				<p className="formulario__mensaje-exito" id="formulario__mensaje-exito">Muchas Gracias por su compra! le estaremos enviando por su gmail los pasos a seguir.</p>
-			</div>
-		</form>
-	</>
-
-    </div>
+	    </div>
 )
 }
 export default Cart

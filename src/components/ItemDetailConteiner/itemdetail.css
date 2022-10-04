@@ -1,0 +1,121 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0062be, #0062be 50%,
+    #014b90 50%, #0062be 100%);
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 710px;
+    background-color: #fff;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition:0.5s
+
+}
+.card:hover{
+    width: 600px;
+}
+
+.card .imgBox{
+    position: relative;
+    min-width: 300px;
+    width: 300pc;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.card:hover .imgBox{
+    transform: rotate(-35deg);
+}
+.card .imgBox img{
+    width: 85%;
+}
+.card .details{
+    position: relative;
+    min-width: 300px;
+    background: #ab4493  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+
+}
+.card .details::berofe{
+    content:"";
+    position:absolute;
+    left:0;
+    width:0;
+    height:0;
+    border-bottom:10px solid transparent;
+    border-top:10px solid transparent;
+    border-left:10px solid #fff;
+}
+.card .details .title small{
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.card .details h4{
+    font-size: 0.9em;
+}
+
+.card .details .description p{
+    font-weight: 200;
+    font-size: 0.8em;
+}
+.card .details .size ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card .details .size ul li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    border: solid 1px #fff;
+    padding: 0.6em;
+    cursor: pointer;
+}
+
+.card .details .size ul li:hover{
+    background-color: #fff;
+    color: #4ba9e9;
+}
+.card .details .buy{
+    display: flex;
+    justify-content:space-between;
+
+}
+.card .details .buy .price{
+    font-size:1.6em;
+    color: #d3d3d3;
+}
+.card .details .buy .btn{
+    background: #fff;
+    padding: 0.5em 0.8em;
+    text-transform:uppercase;
+}
+.card .details .buy .btn a{
+    text-decoration:none;
+    color: #4ba9e9;
+}

@@ -37,11 +37,14 @@ const CartProvider = ({children}) => {
 
     const clearProductCartList = (id) => setCart(cart.filter(product => product.id !== id));
 
-    const getTotalPrice = ()=>{
-        const totalPriceProducts = cart.reduce((acumulador, productoActual)=> acumulador + productoActual.totalPrice,0);
-        console.log(totalPriceProducts);
-        return totalPriceProducts;
+    const getTotalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.Price, 0);
     }
+    // const getTotalPrice = ()=>{
+    //     const totalPriceProducts = cart.reduce((acumulador, productoActual)=> acumulador + productoActual.totalPrice,0);
+    //     console.log(totalPriceProducts);
+    //     return totalPriceProducts;
+    // }
 
     return (
         <CartContext.Provider value={{clearCart, isInCart, removeProduct, addProduct,totalPrice,totalProducts,cart,getTotalPrice, clearProductCartList }}>
