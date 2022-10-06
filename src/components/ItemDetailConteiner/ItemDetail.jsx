@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
@@ -23,9 +22,7 @@ export const ItemDetail = ({item})=>{
             </div>
             <div className="details">
                 <div className="title">
-                    <h3>{item.title} <br/><small>{item.category}</small>
-
-                    </h3>
+                    <h3>{item.title} </h3><br/>
                 </div>
                 <div className="description">
                     <h4>Descripción</h4>
@@ -43,8 +40,8 @@ export const ItemDetail = ({item})=>{
                 </div>
                 <div className="buy">
                     <div className="price">
-                    <sup>$</sup>
-                    <span>{item.Price}</span>
+                    
+                    <span>${item.Price}</span>
                     </div>
                     
 </div><ItemCount initial={1} stock={10} onAdd={onAdd}/>
@@ -56,28 +53,6 @@ export const ItemDetail = ({item})=>{
             }<Link to={`/productos/${item.category}`} className='Link'>Volver</Link>
                 </div>
             </div>
-        {/*
-        <div className='detail'>
-        <div className='card'>
-
-            <p style={{width: "100%"}}>{item.category}</p>
-            <div className='img-container'>
-                <img src={item.pictureUrl} alt={item.title}/>
-            </div>
-            <div className='img-container'>
-                <h4>{item.title}</h4>
-                <h5>$ {item.Price}</h5>
-                <p>{item.description}</p>
-            </div>
-            <ItemCount initial={1} stock={10} onAdd={onAdd}/>
-            {
-                quantity>0 &&
-                <Link to="/cart">
-                    <button>Ir al carrito</button>
-                </Link>
-            }<Link to={`/productos/${item.category}`} className='Link'>Volver</Link>
-        </div>
-        </div>*/}
         </>
     )
 }

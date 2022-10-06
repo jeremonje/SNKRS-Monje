@@ -8,7 +8,6 @@ import inicionike from '../../assets/inicionike.png';
 import facebook from '../../assets/img/facebook(1).png';
 import twitter from '../../assets/img/twitter.png';
 import instagram from '../../assets/img/instagram(1).png';
-// import { baseDatos } from "../baseDatos/baseDatos"
 
 export const Inicio = () => {
     return (
@@ -16,8 +15,8 @@ export const Inicio = () => {
 <div className="content">
     <div className="textBox">
         <h2>meet our  <span id='span'>SNKRS</span></h2>
-        <p>we present you the best snkrs</p>
-        <Link to={"/productos"}>View All Products</Link>
+        <p>Te presentamos las mejores sneakers</p>
+        <Link to={"/productos"}>Ver todos los productos</Link>
     </div>
     <div className="imgBox">
         <img src={inicionike} alt="" />
@@ -29,9 +28,9 @@ export const Inicio = () => {
     <Link to={"/productos/fila"}><li><img src={fila} alt="fila"/></li></Link>
 </ul>
 <ul className="sci">
-    <li><a href="/"><img src={facebook} alt=""/></a></li>
-    <li><a href="/"><img src={twitter} alt=""/></a></li>
-    <li><a href="/"><img src={instagram} alt=""/></a></li>
+    <li><a href="https://www.facebook.com/" target="_blank"  rel="noreferrer"><img src={facebook} alt="" /></a></li>
+    <li><a href="https://twitter.com/"  target="_blank"  rel="noreferrer"><img src={twitter} alt=""/></a></li>
+    <li><a href="https://www.instagram.com/"  target="_blank"  rel="noreferrer"><img src={instagram} alt=""/></a></li>
 </ul>
 </section>
     ) 

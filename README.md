@@ -2,7 +2,7 @@
 
 # Proyecto de tienda de zapatillas, SNKRS.
 
-Mi proyecto trata de vender los mejores modelos de zapatillas de marcas como: Nike, Adidas y Fila.
+Mi proyecto trata de vender los mejores modelos de zapatillas de marcas Nike, Adidas y Fila.
 
 # Gif de Navegacion
 

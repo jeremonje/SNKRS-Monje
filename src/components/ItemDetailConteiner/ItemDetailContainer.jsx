@@ -11,7 +11,6 @@ export const ItemDetailContainer = ()=>{
     const {itemId} = useParams();
     const [item, setItem] = useState({});
     
-
     useEffect(() => {
         const queryRef = doc(db, "items", itemId);
         getDoc(queryRef).then(response=>{
@@ -22,10 +21,8 @@ export const ItemDetailContainer = ()=>{
             console.log(newDoc)
             setItem(newDoc)
         }).catch(error=>console.log(error));
-
         }, [itemId])
             
-
     return (
         <div className="item-detail-container">
             <ItemDetail item={item}/>
