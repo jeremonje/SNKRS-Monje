@@ -7,7 +7,7 @@ Donde se puede simular una compra de dichos productos.
 
 # Gif de Navegacion
 
-![image](https://github.com/jeremonje/SNKRS-Monje/blob/main/src/media/Screenshots.webm)
+![image](https://github.com/jeremonje/SNKRS-Monje/blob/main/src/media/Screenshots.gif)
 
 # Dependencias
 
