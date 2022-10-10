@@ -19,6 +19,10 @@ Maneja el ruteo de la web
 
 Maneja el spinner
 
+### `npm i sweetalert`
+
+paquete de sweetalert para mostrar una Alerta
+
 # Usage
 
 Instalación: npm install
