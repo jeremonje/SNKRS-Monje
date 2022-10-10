@@ -13,3 +13,7 @@ Mi proyecto trata de vender los mejores modelos de zapatillas de marcas Nike, Ad
 ### `npm install react-router-dom`
 
 Maneja el ruteo de la web
+
+### `npm i bootstrap reactstrap`
+
+Maneja el spinner

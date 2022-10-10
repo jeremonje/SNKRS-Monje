@@ -10,7 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(180deg, #0062be, #0062be 50%,
-    #014b90 50%, #0062be 100%);
+    #0062be 50%, #0062be 100%);
 }
 .card {
     display: flex;

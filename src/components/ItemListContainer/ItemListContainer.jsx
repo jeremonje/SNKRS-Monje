@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom';
 import {collection, getDocs} from "firebase/firestore";
 import { db } from '../../utils/firebase';
 import "./ItemListContainer.css"
+import { SpinnerComp } from "../Spinner/Spinner";
 
 
 export const ItemListContainer = ()=>{
     const {category} = useParams();
     const [ productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true)
     
 
     useEffect(()=>{
@@ -32,10 +34,10 @@ export const ItemListContainer = ()=>{
                 }
 
             } catch (error) {
-                console.log(error);
+                console.log(`Error al intentar conectar con el servidor: ${error}`);
+            } finally {
+                setLoading(false);
             }
-            
-
         }
         getData();
     },[category])
@@ -44,8 +46,12 @@ export const ItemListContainer = ()=>{
     
     return(
         <div className="item-list-container" >
+            {
+                loading?
+                    <SpinnerComp/>
+                :
             <ItemList items= {productos}/>
-            
+            }
         </div>
     )
 

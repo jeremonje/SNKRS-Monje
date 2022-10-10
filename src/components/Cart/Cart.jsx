@@ -1,15 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { CartContext/*, useCartContext */} from '../../Context/CartContext';
+import { CartContext } from '../../Context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
 import "./Cart.css"
 import Form from '../Form/Form';
+import { useEffect, useState } from "react"; 
+import { getArray } from "../helpers/getArray"; 
+import { SpinnerComp } from '../Spinner/Spinner';
+
 
 export const Cart = () => {
     const {cart, totalPrice } = useContext(CartContext);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getArray()
+                .then(()=>{
+                })
+                .catch((err)=>console.log(err))
+                .finally(()=> setLoading(false))
+    }, [cart])
 
 return (
+    <>{
+        loading?
+            <SpinnerComp/>
+        :
     <div className='cart'>
     <div>
         {
@@ -35,6 +52,8 @@ return (
         }
         </div>
     </div>
+    }
+    </>
     )
 }
 

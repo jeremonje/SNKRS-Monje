@@ -1,0 +1,22 @@
+
+.spinner {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #ab4493; /* Blue */
+    border-radius: 50%;
+    width: 106px;
+    height: 106px;
+    animation: spin 2s linear infinite;
+    color: official;
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading{
+    color: #0062be;
+}
+

@@ -13,10 +13,11 @@ header{
 h1{
     display: inline-block;
     color: #fff;
-    font-weight: 400;
-    margin-left: 40px;
+    
+    margin-left: 10px;
     text-decoration: none;
     font-size: 15px;
+    
 }
 .nav{
     position: absolute;
@@ -30,6 +31,7 @@ h1{
     overflow: hidden;
     background-color:#0062be;
     position: fixed;
+    min-width: 280px;
 }
 .nav ul{
     position: relative;
@@ -39,15 +41,6 @@ h1{
 .nav ul li{
     list-style: none;
     
-}
-.nav ul li a{
-    font-size: 14px;
-    display: inline-block;
-    color: #fff;
-    font-weight: 400;
-    margin-left: 40px;
-    text-decoration: none;
-    margin: 13px;
 }
 #links{
     font-size: 14px;

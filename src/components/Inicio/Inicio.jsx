@@ -9,7 +9,9 @@ import facebook from '../../assets/img/facebook(1).png';
 import twitter from '../../assets/img/twitter.png';
 import instagram from '../../assets/img/instagram(1).png';
 
+
 export const Inicio = () => {
+
     return (
         <section className="sec">
 <div className="content">
@@ -19,7 +21,7 @@ export const Inicio = () => {
         <Link to={"/productos"}>Ver todos los productos</Link>
     </div>
     <div className="imgBox">
-        <img src={inicionike} alt="" />
+        <img className='img-1' src={inicionike} alt="" />
     </div>
 </div>
 <ul className="thumb">
@@ -35,4 +37,5 @@ export const Inicio = () => {
 </section>
     ) 
 }
+
 export default Inicio;
