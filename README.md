@@ -1,12 +1,13 @@
 # Desarrollador: Jeremias Monje
 
-# Proyecto de tienda de zapatillas, SNKRS.
+# SNKRS.
 
-Mi proyecto trata de vender los mejores modelos de zapatillas de marcas Nike, Adidas y Fila.
+Este es un proyecto de E-commerce de sneakers/zapatillas realizado para el curso de React JS de Coderhouse.
+Donde se puede simular una compra de dichos productos.
 
 # Gif de Navegacion
 
-![image](https://github.com/jeremonje/SNKRS-Monje/blob/main/src/media/Mi%20video.gif)
+![image](https://github.com/jeremonje/SNKRS-Monje/blob/main/src/media/Screenshots.webm)
 
 # Dependencias
 
@@ -17,3 +18,11 @@ Maneja el ruteo de la web
 ### `npm i bootstrap reactstrap`
 
 Maneja el spinner
+
+# Usage
+
+Instalación: npm install
+
+Desplegar servidor: npm start
+
+Visualizar: se abre una nueva pestaña en el navegador en el puerto 3000 o dirígete a http://localhost:3000/

@@ -5,6 +5,8 @@ import { CartContext } from '../../Context/CartContext';
 import { db } from '../../utils/firebase';
 import { addDoc, collection } from 'firebase/firestore';
 import './Form.css'
+import swal from 'sweetalert';
+
 
 export const Form = () => {
     const {cart, totalPrice} = useContext(CartContext);
@@ -27,6 +29,22 @@ export const Form = () => {
         addDoc(queryRef, order).then(respuesta=>setIdOrder(respuesta.id))
         console.log(order);
     }
+        
+        const mostrarAlerta=()=>{
+            swal({
+                title:"Enviar el formulario",
+                text:"deseas confirmar la compra?",
+                icon:"warning",
+                buttons:["No","Si"]
+            }).then(respuesta=>{
+                if(respuesta){
+                    swal({
+                        text:"El formulario se envio con exito",
+                        icon:"success"})
+                }
+            })
+        }
+
     return(
         <div className="contact_form">
                 <p className='p'>Completa este formulario y en breve nos pondremos en contacto contigo</p>
@@ -64,14 +82,16 @@ export const Form = () => {
                     <span id='span' className="obligatorio">*</span>
                 </label>
                     <input type="text" name="introducir_Provincia" id="Provincia" required="obligatorio" placeholder="Escribe tu Provincia"/>
-                </p>    
-                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                </p>   
+                
+                <button type="submit" name="enviar_formulario" id="enviar" onClick={()=>mostrarAlerta()}><p>Enviar</p></button>
 
                 <p className="aviso">
                   <span id='span' className="obligatorio"> * </span>los campos son obligatorios.
                 </p>          
 
             </form>
+            
             </div>
             </div>
     )

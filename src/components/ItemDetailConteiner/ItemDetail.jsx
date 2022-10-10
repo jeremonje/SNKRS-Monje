@@ -5,6 +5,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
 import './itemdetail.css'
 
+
 export const ItemDetail = ({item})=>{
     const {addProduct} = useContext(CartContext);
     const [quantity, setQuantity] = useState(0);
