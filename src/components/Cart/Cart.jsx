@@ -42,6 +42,7 @@ return (
         </div>
         </div>
             <p>Precio total: {Math.round(totalPrice())}</p>
+            <p className='info-tallas'>Cuando nos pondremos en contacto con usted podrá solicitar su talla.</p>
             <Form/>
             </>
             :

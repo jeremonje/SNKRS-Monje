@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     display: flex;
     justify-content: center;
@@ -97,7 +98,7 @@ body{
     cursor: pointer;
 }
 
-.card .details .size ul li:hover{
+.li:hover{
     background-color: #fff;
     color: #4ba9e9;
 }

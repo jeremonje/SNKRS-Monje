@@ -30,18 +30,18 @@ export const ItemDetail = ({item})=>{
                     <p>{item.description}</p>
                 </div>
                 <div className="size">
-                    <h4>Tallas</h4>
+                    <h4>Tallas disponibles</h4>
                     <ul>
-                        <li>38</li>
-                        <li>39</li>
-                        <li>40</li>
-                        <li>41</li>
-                        <li>42</li>
+                        <li className='li'>38</li>
+                        <li className='li'>39</li>
+                        <li className='li'>40</li>
+                        <li className='li'>41</li>
+                        <li className='li'>42</li>
                     </ul>
                 </div>
+                
                 <div className="buy">
                     <div className="price">
-                    
                     <span>${item.Price}</span>
                     </div>
                     
