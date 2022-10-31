@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/SNKRS-Monje/static/css/main.9882ec01.css",
+    "main.js": "/SNKRS-Monje/static/js/main.deaca416.js",
+    "static/js/787.efb5b23a.chunk.js": "/SNKRS-Monje/static/js/787.efb5b23a.chunk.js",
+    "static/media/inicionike.png": "/SNKRS-Monje/static/media/inicionike.858daade5479f360dd2c.png",
+    "static/media/adidas.png": "/SNKRS-Monje/static/media/adidas.5f54b4f936eed413c36a.png",
+    "static/media/fila.png": "/SNKRS-Monje/static/media/fila.4dcc89a1e49b71aeab86.png",
+    "static/media/nike.png": "/SNKRS-Monje/static/media/nike.e6727fdc7c3d95410a63.png",
+    "index.html": "/SNKRS-Monje/index.html",
+    "main.9882ec01.css.map": "/SNKRS-Monje/static/css/main.9882ec01.css.map",
+    "main.deaca416.js.map": "/SNKRS-Monje/static/js/main.deaca416.js.map",
+    "787.efb5b23a.chunk.js.map": "/SNKRS-Monje/static/js/787.efb5b23a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9882ec01.css",
+    "static/js/main.deaca416.js"
+  ]
+}
